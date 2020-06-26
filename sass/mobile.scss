@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+    .grid {
+        // AS - Aside
+        // HD - Header
+        // MA - Main
+        // FT - Footer
+
+        grid-template-columns: auto;
+        grid-template-rows: 50px 100px auto 50px;
+        grid-template-areas:
+            'AS AS AS AS'
+            'HD HD HD HD'
+            'MA MA MA MA'
+            'FT FT FT FT';
+    }
+}

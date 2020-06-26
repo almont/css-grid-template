@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --white: #ffffff;
+    --background-color: #f2f2f2;
+    --title-color: #001e50;
+    --text-color: #000000;
+    --drop-shadow: 1px 1px 50px 5px #ccc;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.grid {
+    min-height: 100vh;
+
+    // AS - Aside
+    // HD - Header
+    // MA - Main
+    // FT - Footer
+
+    display: grid;
+    grid-template-columns: 100px auto auto auto;
+    grid-template-rows: 100px auto 50px;
+    grid-template-areas:
+        'AS HD HD HD'
+        'AS MA MA MA'
+        'AS FT FT FT';
+}
+
+input,
+button {
+    border: none;
+    outline: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+.hide {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.show {
+    opacity: 1;
+    transition: 0.5s;
+}
